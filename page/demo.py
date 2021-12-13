@@ -10,7 +10,7 @@ class MainPage():
         self.goExercisePage = goExercisePage
 
         self.root = tk.Tk()
-        self.root.title("倉頡之星2021")
+        self.root.title("仓颉学习器")
         self.root.geometry("600x600")
         self.root.configure(background='white')
         self.root.resizable(False, False)
