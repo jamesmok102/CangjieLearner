@@ -4,6 +4,7 @@ from tkinter import *
 import pandas as pd
 import random
 
+
 class ExercisePage(object):
     def backMainPage(self):
         self.goMainPage()
@@ -55,7 +56,8 @@ class ExercisePage(object):
                 temp = self.dict[event.char]
                 if 0 <= self.n <= 4:
                     tList = list(self.textLable['text'])
-                    tList[self.n] = temp.decode('utf-8')
+                    #tList[self.n] = temp.decode('utf-8')
+                    tList[self.n] = temp
                     self.textLable['text'] = "".join(tList)
                     self.n = self.n + 1
                 else:
@@ -66,7 +68,8 @@ class ExercisePage(object):
                 if self.n > 0:
                     self.n = self.n - 1
                 tList = list(self.textLable['text'])
-                tList[self.n] = "？".decode('utf-8')
+                #tList[self.n] = "？".decode('utf-8')
+                tList[self.n] = "？"
                 self.textLable['text'] = "".join(tList)
             elif self.n < 0:
                 self.n = 0
@@ -86,7 +89,8 @@ class ExercisePage(object):
                     answer_list2.append(self.dict[y])
             answer = "".join(answer_list2)
             #if(self.bigWord['text'] == "?"):
-            self.bigWord['text'] = unicode(word, encoding="utf-8")
+            #self.bigWord['text'] = unicode(word, encoding="utf-8")
+            self.bigWord['text'] = str(word)
             self.textLable2['text'] = answer
             #print(word)
             #print(self.bigWord['text'])
